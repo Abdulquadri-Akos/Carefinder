@@ -7,10 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Super First Next.js App",
-    template: "%s | Super First Next.js App",
+    default: "Carefinder Application",
+    template: "%s | Carefinder Application",
   },
-  description: "A simple application to demonstrate Next.js features",
+  description:
+    "Carefinder is a simple tool that aims to help users find, export, and share hospitals within the region",
 };
 
 export default function RootLayout({ children }) {
