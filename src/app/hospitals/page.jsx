@@ -8,7 +8,9 @@ import Image from "next/image";
 
 const getHospitals = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/hospitals/"); // Replace with your actual API URL
+    const response = await fetch(
+      "https://carefinder-13ivczmbb-akosile-abdulquadris-projects.vercel.app/api/hospitals/"
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
