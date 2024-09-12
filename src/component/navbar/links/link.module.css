@@ -4,10 +4,28 @@
   gap: 10px;
 }
 
+.loginLink {
+  background-color: var(--color-secondary-1);
+  border-radius: 5px;
+  color: var(--color-black);
+}
+
+.registerLink {
+  background-color: var(--color-primary-2);
+  border-radius: 5px;
+  color: var(--color-white);
+}
+
 .logout {
-  padding: 10px;
+  background-color: var(--color-primary-2);
+  color: var(--color-white);
+  padding-block: 12px;
+  padding-inline: 20px;
   cursor: pointer;
   font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
 
 .menuButton {

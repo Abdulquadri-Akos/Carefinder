@@ -26,7 +26,7 @@ export const authConfig = {
       const user = auth?.user;
       const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
       const isOnHospitalPage =
-        request.nextUrl?.pathname.startsWith("/hospital");
+        request.nextUrl?.pathname.startsWith("/dashboard");
       const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
 
       //ONLY ADMIN CAN REACH THE ADMIN DASHBOARD

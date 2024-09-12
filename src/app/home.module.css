@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 100px;
+  align-items: center;
 }
 
 .title {
@@ -29,11 +30,14 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  background-color: var(--color-primary-2);
+  color: var(--color-white);
+  font-weight: 600;
 }
 
 .button:first-child {
-  background-color: var(--btn);
-  color: var(--text);
+  background-color: var(--color-secondary-1);
+  color: var(--color-black);
 }
 
 .brands {
@@ -46,12 +50,13 @@
 .imgContainer {
   flex: 1;
   position: relative;
+  height: 600px; /* Increase the height for a larger image */
+  max-width: 100%;
 }
 
 .heroImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100px;
+  object-fit: contain;
 }
 
 @media (max-width: 1024px) {

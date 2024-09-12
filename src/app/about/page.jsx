@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./about.module.css";
+import Navbar from "@/component/navbar/Navbar";
+import Footer from "@/component/footer/Footer";
 
 export const metadata = {
   title: "About Page",
@@ -8,53 +10,68 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.textContainer}>
-        <h2 className={styles.subTitle}>About Carefinder</h2>
-        <h1 className={styles.title}>
-          Carefinder is committed to simplifying access to healthcare
-          information.
-        </h1>
-        <p className={styles.description}>
-          We understand the importance of staying healthy, and we know that
-          finding the right healthcare facility can sometimes be a challenge.
-          That&rsquo;s why we&rsquo;ve created Carefinder, a user-friendly
-          platform that helps you find, export, and share hospitals within your
-          region. Whether you&rsquo;re looking for a local hospital, need to
-          share information with loved ones, or manage healthcare data,
-          Carefinder is here to assist you. With our intuitive search feature,
-          easy export options, and robust sharing capabilities, you can take
-          control of your healthcare journey. Carefinder is your reliable guide
-          to quality healthcare.
-        </p>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.textContainer}>
+          <div className={styles.about}>
+            <h2 className={styles.subTitle}>About Carefinder</h2>
 
-        <div className={styles.boxes}>
-          <div className={styles.box}>
-            <h1>1,000+</h1>
-            <p>Hospitals Listed</p>
+            <p className={styles.description}>
+              At Carefinder, we are committed to simplifying the healthcare
+              search process for everyone. We believe that access to quality
+              healthcare is a fundamental right, and our platform is designed to
+              make it easier for individuals to locate and share information
+              about hospitals in their area.
+            </p>
           </div>
 
-          <div className={styles.box}>
-            <h1>1,000+</h1>
-            <p>Hospitals Listed</p>
+          <div className={styles.vision}>
+            <h2 className={styles.subTitle}>Vision</h2>
+            <p className={styles.description}>
+              To ensure seamless access to healthcare information for everyone,
+              empowering individuals to make informed choices.
+            </p>
           </div>
 
-          <div className={styles.box}>
-            <h1>5,000+</h1>
-            <p>Users Served</p>
+          <div className={styles.mission}>
+            <h2 className={styles.subTitle}>Mission</h2>
+            <p className={styles.description}>
+              To connect people with healthcare facilities through an intuitive
+              platform that simplifies finding, exporting, and sharing hospital
+              data.
+            </p>
+          </div>
+
+          <div className={styles.boxes}>
+            <div className={styles.box}>
+              <h1>1,000+</h1>
+              <p>Hospitals Listed</p>
+            </div>
+
+            <div className={styles.box}>
+              <h1>1,000+</h1>
+              <p>Hospitals Listed</p>
+            </div>
+
+            <div className={styles.box}>
+              <h1>5,000+</h1>
+              <p>Users Served</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles.imgContainer}>
-        <Image
-          src="/about.png"
-          alt="About image"
-          fill
-          className={styles.imgContain}
-        />
+        <div className={styles.imgContainer}>
+          <Image
+            src="/WorkingTogther.png"
+            alt="About image"
+            fill
+            className={styles.imgContain}
+          />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

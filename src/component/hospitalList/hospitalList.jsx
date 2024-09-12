@@ -26,7 +26,7 @@ const HospitalList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const hospitalsPerPage = 10;
+  const hospitalsPerPage = 15;
 
   useEffect(() => {
     const fetchHospitals = async () => {
@@ -69,10 +69,10 @@ const HospitalList = () => {
   return (
     <div>
       <div className={styles.filter}>
-        <h1>List of Hospitals</h1>
+        <h2>List of Available Hospitals</h2>
         <Search searchTerm={searchTerm} onSearchChange={handleSearch} />
       </div>
-      {loading ? ( // Show loading image if data is being fetched
+      {loading ? (
         <div className={styles.loadingContainer}>
           <Image
             src="/Logo.png"
@@ -83,7 +83,7 @@ const HospitalList = () => {
           />
           <p>Loading Hospitals</p>
         </div>
-      ) : error ? ( // Show error message if there's an error
+      ) : error ? (
         <div className={styles.error}>Error: {error}</div>
       ) : (
         <>
@@ -98,7 +98,7 @@ const HospitalList = () => {
             <tbody>
               {currentHospitals.map((hospital) => {
                 return (
-                  <tr className={styles.tr} key={hospital.__Id}>
+                  <tr className={styles.tr} key={crypto.randomUUID()}>
                     <td>{hospital.hospitalName}</td>
                     <td>{hospital.address}</td>
                     <td>{hospital.contact}</td>

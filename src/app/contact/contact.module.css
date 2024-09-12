@@ -1,7 +1,11 @@
 .container {
-  display: flex;
-  gap: 100px;
-  align-items: center;
+  margin-block-start: 50px;
+}
+
+.text {
+  text-align: center;
+  font-size: 2rem;
+  padding-block: 50px;
 }
 
 .imgContainer {
@@ -27,11 +31,11 @@
 .form input,
 .form textarea {
   padding: 15px;
-  border-radius: 5px;
-  border: none;
   outline: none;
-  background-color: var(--bgSoft);
-  color: var(--text);
+  border: none;
+  border-bottom: 2px solid var(--color-secondary-1);
+  background-color: var(--color-primary-1);
+  color: var(--color-secondary-1);
 }
 
 .form button {

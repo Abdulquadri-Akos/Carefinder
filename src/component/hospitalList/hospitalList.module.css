@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-block-end: 30px;
+  align-items: center;
 }
 
 .table {
@@ -16,7 +17,8 @@
 }
 
 .table tr:nth-child(even) {
-  background-color: var(--bgSoft);
+  background-color: var(--color-secondary-2);
+  color: var(--color-black);
 }
 
 /* .table tr:hover {
@@ -27,8 +29,8 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: var(--bg);
-  color: white;
+  background-color: var(--color-primary-2);
+  color: var(--color-black);
 }
 
 .search {

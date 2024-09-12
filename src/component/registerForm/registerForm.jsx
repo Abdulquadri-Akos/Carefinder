@@ -19,18 +19,37 @@ const RegisterForm = () => {
 
   return (
     <form className={styles.form} action={formAction}>
-      <input type="text" name="username" placeholder="username" />
-      <input type="email" name="email" placeholder="email" />
-      <input type="password" name="password" placeholder="password" />
       <input
-        type="password"
-        name="passwordRepeat"
-        placeholder="password repeat"
+        type="text"
+        name="username"
+        placeholder="Enter Username"
+        required
       />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Valid Email"
+        required
+      />
+
+      <div className={styles.formControl}>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+          required
+        />
+        <input
+          type="password"
+          name="passwordRepeat"
+          placeholder="Confirm Password"
+          required
+        />
+      </div>
       <button>Register</button>
       {state?.error}
       <Link href="/login">
-        Have an account? <b>Login</b>
+        Already have an account? <b>Login</b>
       </Link>
     </form>
   );

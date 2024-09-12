@@ -1,18 +1,35 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: var(--color-black);
 }
 
 .wrapper {
   width: 500px;
-  background-color: var(--bgSoft);
   padding: 50px;
-  display: flex;
   flex-direction: column;
   text-align: center;
   gap: 30px;
   border-radius: 5px;
+  background: var(--color-white);
+  border-radius: 5px;
+}
+
+.heading {
+  text-align: left;
+  padding-block-start: 20px;
+  line-height: 1.5;
+}
+
+.heading h1 {
+  color: var(--color-primary-1);
+}
+
+.loginForm {
+  padding-block: 20px;
 }
 
 .github {
@@ -21,17 +38,44 @@
   cursor: pointer;
 }
 
+.socialHandle {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary-1);
+  margin-block: 20px;
+  position: relative;
+}
+
+.socialHandle p {
+  background-color: var(--color-primary-1);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  width: fit-content;
+  position: absolute;
+  top: -16px;
+  right: 45%;
+}
+
 .form button {
   padding: 20px;
   cursor: pointer;
-  background-color: var(--btn);
-  color: var(--textColor);
+  outline: 1px solid var(--color-primary-1);
+  background-color: var(--color-white);
+  color: var(--color-primary-1);
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 
-.btn {
+.form button:hover {
+  background-color: var(--color-primary-1);
+}
+
+.form {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+  padding-block-start: 20px;
 }

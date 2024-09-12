@@ -8,18 +8,24 @@
 .form input {
   padding: 20px;
   cursor: pointer;
-  background-color: var(--bg);
-  color: var(--textColor);
-  border: none;
+  border: 0.7px solid var(--color-primary-1);
   border-radius: 5px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  outline: none;
 }
 
 .form button {
   padding: 20px;
   cursor: pointer;
-  background-color: var(--btn);
-  color: var(--textColor);
+  background-color: var(--color-primary-1);
+  color: var(--color-white);
   font-weight: bold;
   border: none;
   border-radius: 5px;
+}
+
+.formControl {
+  display: flex;
+  gap: 10px;
 }

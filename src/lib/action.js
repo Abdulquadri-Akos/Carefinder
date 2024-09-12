@@ -18,10 +18,12 @@ export const newHospital = async (previousState, formData) => {
     });
 
     await newPost.save();
+    console.log(hospitalName, address, contact);
     console.log("saved Hospital to database");
-    // To update the blog page instantly after adding a new post
+
     // we can use the revalidate option
-    revalidatePath("/hospitals");
+    revalidatePath("/dashboard");
+    return { success: true };
   } catch (error) {
     console.log(error);
     return { error: "Something went wrong" };
@@ -44,7 +46,7 @@ export const handleGithubLogout = async () => {
 export const handleWithGoogle = async () => {
   "use server";
 
-  await signIn("google", { redirectTo: "/" });
+  await signIn("google", { redirectTo: "/dashboard" });
 };
 
 export async function doLogout() {
@@ -54,7 +56,7 @@ export async function doLogout() {
 export async function doSocialLogin(formData) {
   "use server";
   const action = formData.get("action");
-  await signIn(action, { redirectTo: "/" });
+  await signIn(action, { redirectTo: "/dashboard" });
 }
 
 export const register = async (previousState, formData) => {
@@ -100,6 +102,7 @@ export const login = async (previousState, formData) => {
     await signIn("credentials", {
       username,
       password,
+      redirectTo: "/dashboard",
     });
   } catch (error) {
     console.log(error);

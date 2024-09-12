@@ -1,4 +1,8 @@
 .search {
-  padding: 10px;
+  padding-inline: 10px;
+  padding-block: 15px;
   width: 20%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
